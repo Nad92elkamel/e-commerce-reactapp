@@ -1,0 +1,47 @@
+/* Navbar */
+.navbar-nav a{
+  font-size: 18px;
+}
+/* Home */
+h5{
+  color: brown;
+}
+p{
+  color: black;
+}
+/* About */
+.container .heading{
+  text-align: center;
+  color: black;
+  padding-bottom: 3.5rem;
+  font-size: 3rem;
+}
+.container .heading span{
+  color: brown;
+}
+/*.container .row{
+  display: flex;
+  justify-content: center;
+}*/
+.container .row .image{
+  display: flex;
+  justify-content: center;
+}
+.container .row .image img{
+  height: 200px;
+  width: 75%;
+}
+/*.container .row .content{
+  flex:1 1 45rem;
+}*/
+.container .row .content h1{
+  font-size: 2rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.container .row .content p{
+  color: white;
+  display: flex;
+  justify-content: center;
+}
