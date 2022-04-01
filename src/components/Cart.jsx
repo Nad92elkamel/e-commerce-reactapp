@@ -1,10 +1,8 @@
-import { StarTwoTone } from '@material-ui/icons'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
-import { delCart } from '../redux/action/index'
+import { addCart, delCart } from '../redux/action/index'
 import { NavLink } from 'react-router-dom'
-import handleCart from '../redux/reducer/handleCart'
 
 
 const Cart = () => {
@@ -14,9 +12,6 @@ const Cart = () => {
     const handleClose = (item) => {
         dispatch(delCart(item))
     }
-    /*const handleButton = (item) => {
-        dispatch(handleCart(item))
-    }*/
 
     const cartItems = (product) => {
         return (
@@ -33,10 +28,10 @@ const Cart = () => {
                                 {product.qty} X ${product.price} = $
                                 {product.qty * product.price}
                             </p>
-                            <button className='btn btn-outline-dark me-4' onClick={()=>dispatch(handleCart(product))}>
+                            <button className='btn btn-outline-dark me-4' onClick={()=>dispatch(delCart(product))}>
                                 <i className='fa fa-minus'></i>
                             </button>
-                            <button className='btn btn-outline-dark me-4' onClick={()=>dispatch(handleCart(product))}>
+                            <button className='btn btn-outline-dark me-4' onClick={()=>dispatch(addCart(product))}>
                                 <i className='fa fa-plus'></i>
                             </button>
                         </div>
